@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/grid"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum = "100"
+    android:orientation="vertical">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="20"
+        tools:context="com.example.dmitry.xplocity.ChainView" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="80">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="/"
+            app:layout_constraintBaseline_toBaselineOf="@+id/loc_cnt_explored"
+            app:layout_constraintLeft_toRightOf="@+id/loc_cnt_explored"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:id="@+id/loc_cnt_explored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="TextView"
+            android:textColor="@android:color/holo_green_dark"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_editor_absoluteY="178dp"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:id="@+id/loc_cnt_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="TextView"
+            app:layout_constraintBaseline_toBaselineOf="@+id/loc_cnt_explored"
+            app:layout_constraintLeft_toRightOf="@+id/textView4"
+            android:layout_marginStart="8dp" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>
